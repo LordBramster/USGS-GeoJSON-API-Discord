@@ -1,6 +1,5 @@
 
 <p align="center">
-    <br>
     <a href="#"><img width="50%" src="./assets/img/usgs_logo_full.png"></a>
 </p>
 
@@ -15,14 +14,32 @@
 <a href="#"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-8d3f8d.svg?logo=github%20actions&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="Cron" src="https://img.shields.io/badge/Cron-372923.svg?logo=ubuntu&logoColor=white&style=for-the-badge"></a>
 
+<br>
+
 ## Overview
+
+- **GitHub Action Workflow** builds and runs the job every **Friday**, at **12:00PM**. `(00 12 * * 5)`
+- **USGS API Feed** is parsed and pulled to find Earthquake data for `significant` magnitudes over a `week` interval.
+- A finalized Earthquake embedded message is sent to a **Discord Webhook URL**.
+
+<br>
+
 [![GitHub Actions](https://github.com/LordBramster/USGS-GeoJSON-API-Discord/actions/workflows/actions.yml/badge.svg)](https://github.com/LordBramster/USGS-GeoJSON-API-Discord/actions/workflows/actions.yml)
+
+
 
 ## Discord Webhook
 
-- 
+Once the `Parse Earthquake API and Send Webhook` job finishes, an **Embedded Message** is sent to the **Webhook URL**, safely stored in **GitHub Secrets**.
 
-## Custom collection of USGS-API-Feeds in JSON:
+<p align="center">
+    <a href="#"><img width="85%" src="./assets/img/demo_discord_channel.JPG"></a>
+</p>
+
+## USGS-API Feed URLs:
+
+Collection of available API Feed URLs, through a custom built `JSON` file structuring URLs by **Interval** and **Magnititude**.
+
 ```
 {
   "feed": {

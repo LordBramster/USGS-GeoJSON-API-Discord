@@ -1,4 +1,4 @@
-name: Run
+name: Parse Earthquake API and Send Webhook
 
 on:
   schedule:
