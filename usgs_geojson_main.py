@@ -20,10 +20,10 @@ if __name__ == "__main__":
     webhook_msg = ''
     webhook_url = usgs_webhook.get_webhook_url()
     webhook_username = usgs_webhook.get_webhook_username()
-    webhook_embeds_color = usgs_webhook.get_webhook_embeds_color('purple')
+    webhook_embeds_color = usgs_webhook.get_webhook_embeds_color('violet')
     webhook_embeds = [
         {
-            "title": f"<{feed_magnitude}><{feed_interval}> :: Quakes",
+            "title": f"Earthquakes :: <{feed_magnitude}><{feed_interval}>",
             "description": quake_str,
             "color": webhook_embeds_color
         }
