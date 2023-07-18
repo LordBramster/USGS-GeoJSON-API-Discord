@@ -1,0 +1,32 @@
+name: Run
+
+on:
+  schedule:
+    - cron: '00 12 * * 5' # At 12:00 on Friday
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout GitHub Content to GitHub Runner
+        uses: actions/checkout@v2 # checkout to github runner
+
+      - name: Build Python Image
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Python Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Parse USGS-API Feed (GeoJSON) and Send Webhook
+        env:
+          ENV_URL: ${{ secrets.ENV_URL }}
+        run: |
+          echo "Executing :: usgs_geojson_main.py"
+          python usgs_geojson_main.py
+          echo "Finished :: usgs_geojson_main.py"

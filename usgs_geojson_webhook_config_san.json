@@ -1,0 +1,24 @@
+{
+  "webhook": {
+    "username": "USGS Earthquake Log",
+    "url": "~~~THIS URL HAS BEEN SANITIZED~~~"
+  },
+  "colors": {
+    "red": {
+      "hex": "ff0000",
+      "dec": 16711680
+    },
+    "green": {
+      "hex": "00e68a",
+      "dec": 59018
+    },
+    "purple": {
+      "hex": "9546f9",
+      "dec": 8210169
+    },
+    "violet": {
+      "hex": "b346f9",
+      "dec": 11749113
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import os
 import usgs_geojson_api as usgs_api
 import usgs_geojson_webhook as usgs_webhook
 
@@ -7,9 +8,9 @@ if __name__ == "__main__":
     # for all params, see https://discordapp.com/developers/docs/resources/channel#embed-object
 
     # FEED QUERY
-    # TODO replace input arguments with default variables for server use.
-    feed_interval = str(input('\n Select an interval (hour/day/week/month) > '))
-    feed_magnitude = str(input('\n Select a magnitude (M1.0/M2.5/M4.5/all/significant) > '))
+    # TODO replace input arguments with default variables for server/job use.
+    feed_interval = "week"
+    feed_magnitude = "significant"
 
     # USGS API FEED
     usgs_api_url = usgs_api.api_get_url_feed(feed_interval, feed_magnitude)
@@ -18,7 +19,8 @@ if __name__ == "__main__":
 
     # USGS WEBHOOK
     webhook_msg = ''
-    webhook_url = usgs_webhook.get_webhook_url()
+    # TODO replace input webhook URL to sanitize for public server/job use.
+    webhook_url = os.environ['ENV_URL']  # usgs_webhook.get_webhook_url()
     webhook_username = usgs_webhook.get_webhook_username()
     webhook_embeds_color = usgs_webhook.get_webhook_embeds_color('violet')
     webhook_embeds = [
@@ -28,4 +30,8 @@ if __name__ == "__main__":
             "color": webhook_embeds_color
         }
     ]
-    usgs_webhook.send_webhook(webhook_username, webhook_msg, webhook_embeds, webhook_url)
+    webhook_status, webhook_sent = usgs_webhook.send_webhook(webhook_username, webhook_msg, webhook_embeds, webhook_url)
+
+    # Print
+    print(f"\nWEBHOOK: {webhook_sent}")
+    print(f"RESPONSE: {webhook_status}")

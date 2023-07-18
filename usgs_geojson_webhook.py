@@ -52,4 +52,4 @@ def send_webhook(username, message, embeds, url):
     # Get Response Code
     result_response = get_response_code(result_webhook)
 
-    return result_response
+    return result_response, webhook_data
