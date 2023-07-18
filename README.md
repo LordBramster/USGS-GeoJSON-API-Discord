@@ -6,5 +6,5 @@
 
 <br>
 
-# USGS Earthquake GeoJSON API and Python
+# USGS Earthquake GeoJSON API - Discord Integration
 
