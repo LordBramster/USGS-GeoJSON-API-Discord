@@ -20,7 +20,9 @@
 
 - **GitHub Action Workflow** builds and runs the job every **Friday**, at **12:00PM**. `(00 12 * * 5)`
 - **USGS API Feed** is parsed and pulled to find Earthquake data for `significant` magnitudes over a `week` interval.
-- A finalized Earthquake Summary, as an embedded message, is sent to a **Discord Webhook URL**.
+- A finalized Earthquake Summary, as an embedded message, is sent to multiple **Discord Webhook URLs**.
+
+> *Note: Webhook links are stored for security through **Git Secrets** on the public repository. This does not reflect implementation for a real prod environment.*
 
 <br>
 
