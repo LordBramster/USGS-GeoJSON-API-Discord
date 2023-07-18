@@ -15,14 +15,14 @@
 <a href="#"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-8d3f8d.svg?logo=github%20actions&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="Cron" src="https://img.shields.io/badge/Cron-372923.svg?logo=ubuntu&logoColor=white&style=for-the-badge"></a>
 
-
 ## Overview
+[![GitHub Actions](https://github.com/LordBramster/USGS-GeoJSON-API-Discord/actions/workflows/actions.yml/badge.svg)](https://github.com/LordBramster/USGS-GeoJSON-API-Discord/actions/workflows/actions.yml)
 
-### Discord Webhook
+## Discord Webhook
 
-### Cron-Jobs
+- 
 
-### Custom collection of USGS-API-Feeds in JSON:
+## Custom collection of USGS-API-Feeds in JSON:
 ```
 {
   "feed": {
