@@ -7,8 +7,9 @@ if __name__ == "__main__":
     # for all params, see https://discordapp.com/developers/docs/resources/channel#embed-object
 
     # FEED QUERY
-    feed_interval = "day"
-    feed_magnitude = "M4.5"
+    # TODO replace input arguments with default variables for server use.
+    feed_interval = str(input('\n Select an interval (hour/day/week/month) > '))
+    feed_magnitude = str(input('\n Select a magnitude (M1.0/M2.5/M4.5/all/significant) > '))
 
     # USGS API FEED
     usgs_api_url = usgs_api.api_get_url_feed(feed_interval, feed_magnitude)
