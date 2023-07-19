@@ -5,7 +5,7 @@
 
 <br>
 
-# USGS Earthquake GeoJSON API Parser
+# USGS Earthquake GeoJSON API
 
 > A simple USGS Earthquake GeoJSON API parser and an integration with Discord Webhooks.
 
