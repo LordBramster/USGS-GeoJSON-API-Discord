@@ -15,8 +15,6 @@ jobs:
           ENV_GITLOG_URL: ${{ secrets.GITLOG_URL }}
           job_status: ${{ job.status }}
         run: |
-          messagearray=($(curl -i -s https://www.google.com/ | awk 'NR==1'))
-          # this next line removes nasty characters that give json errors (keeps only letters, numbers SPACE and -)
-          message=`echo ${messagearray[@]} | sed 's/[^0-9A-Za-z -]*//g'`;
-          sendcontent='{"username": "Test", "content": "'"$job_status"'"}'
-          curl -H "Content-Type: application/json" -d "$sendcontent" "$ENV_GITLOG_URL"
+          # DATA='{"username": "Sent from GitHub Workflow", "content": "'"$job_status"'"}'
+          JSON="{\"content\":null,\"embeds\": [{\"color\": \"16237652\"}]}\"
+          curl -d "$JSON" -H "Content-Type: application/json" -d "$DATA" "$ENV_GITLOG_URL"
