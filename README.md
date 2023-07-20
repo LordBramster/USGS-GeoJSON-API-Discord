@@ -31,7 +31,7 @@
 
 ## Discord Webhook
 
-Once the `Parse Earthquake API and Send Webhook` job finishes, an **embedded message** is sent to the **Discord Webhook URL**, safely stored as an environment variable.
+Once the `Workflow Job` finishes, an **embedded message** is sent to the **Discord Webhook URL**, safely stored as an environment variable.
 
 <p align="center">
     <a href="#"><img width="85%" src="./assets/img/demo_discord_channel.JPG"></a>

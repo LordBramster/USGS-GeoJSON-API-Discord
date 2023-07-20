@@ -1,4 +1,4 @@
-name: Parse Earthquake API and Send Webhook
+name: Parse Earthquake API and Send Webhook(s)
 
 on:
   schedule:
@@ -31,3 +31,4 @@ jobs:
           echo "Starting ..."
           python usgs_geojson_main.py
           echo "Done !"
+          echo ${{ job.status }}

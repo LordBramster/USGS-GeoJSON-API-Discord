@@ -1,0 +1,17 @@
+name: Send Discord GitLog Webhook
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Content to GitHub Runner
+        uses: actions/checkout@v2 # checkout to github runner
+
+      - name: Send Webhook
+        run: |
+          echo ${{ job.status }}
+          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Posted Via Command line\"}" ${{ secrets.ENV_URLS }}
+
