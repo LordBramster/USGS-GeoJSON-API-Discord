@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     # FEED QUERY
     # TODO replace input arguments with default variables for server/job use.
-    feed_interval = "week"
+    feed_interval = "day"
     feed_magnitude = "significant"
 
     # USGS API FEED
