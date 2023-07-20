@@ -15,6 +15,5 @@ jobs:
           ENV_GITLOG_URL: ${{ secrets.GITLOG_URL }}
           job_status: ${{ job.status }}
         run: |
-          # DATA='{"username": "Sent from GitHub Workflow", "content": "'"$job_status"'"}'
-          JSON="{\"content\":null,\"embeds\": [{\"color\": \"16237652\"}]}\"
-          curl -d "$JSON" -H "Content-Type: application/json" -d "$DATA" "$ENV_GITLOG_URL"
+          JSON="{\"content\": \"Sent from GitHub Workflow\",\"embeds\": [{\"color\": \"16237652\"}]}\"
+          curl -d "$JSON" -H "Content-Type: application/json" "$ENV_GITLOG_URL"
