@@ -1,4 +1,4 @@
-name: Send Discord GitLog Webhook
+name: Send Discord Gitlog Webhook
 
 on:
   workflow_dispatch:
@@ -10,9 +10,13 @@ jobs:
       - name: Checkout GitHub Content to GitHub Runner
         uses: actions/checkout@v2 # checkout to github runner
 
-      - name: Send GitLog to Discord Wbhook URL Secret
+      - name: Send Gitlog to Discord Webhook URL Secret
         env:
           ENV_GITLOG_URL: ${{ secrets.GITLOG_URL }}
+          job_status: ${{ job.status }}
         run: |
-          echo ${{ job.status }}
-          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Posted Via Command line\"}" $ENV_GITLOG_URL
+          messagearray=($(curl -i -s https://www.google.com/ | awk 'NR==1'))
+          # this next line removes nasty characters that give json errors (keeps only letters, numbers SPACE and -)
+          message=`echo ${messagearray[@]} | sed 's/[^0-9A-Za-z -]*//g'`;
+          sendcontent='{"username": "Test", "content": "'"$job_status"'"}'
+          curl -H "Content-Type: application/json" -d "$sendcontent" "$ENV_GITLOG_URL"
