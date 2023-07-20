@@ -10,8 +10,9 @@ jobs:
       - name: Checkout GitHub Content to GitHub Runner
         uses: actions/checkout@v2 # checkout to github runner
 
-      - name: Send Webhook
+      - name: Send GitLog to Discord Wbhook URL Secret
+        env:
+          ENV_GITLOG_URL: ${{ secrets.GITLOG_URL }}
         run: |
           echo ${{ job.status }}
-          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Posted Via Command line\"}" ${{ secrets.ENV_URLS }}
-
+          curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST --data "{\"content\": \"Posted Via Command line\"}" $ENV_GITLOG_URL
