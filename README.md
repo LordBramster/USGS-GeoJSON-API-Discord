@@ -75,3 +75,9 @@ Collection of available API Feed URLs, through a custom built `JSON` file struct
   }
 }
 ```
+
+## Resources
+- https://earthquake.usgs.gov/fdsnws/event/1/
+- https://earthquake.usgs.gov/fdsnws/event/1/#parameters
+- https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson_detail.php
+
