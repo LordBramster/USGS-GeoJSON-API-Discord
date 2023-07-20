@@ -10,7 +10,7 @@
 > A simple USGS Earthquake GeoJSON API parser and an integration with Discord Webhooks.
 
 <a href="#"><img alt="USGS API" src="https://custom-icon-badges.demolab.com/badge/USGS API-009973.svg?logo=server&logoColor=white&style=for-the-badge"></a>
-<a href="#"><img alt="GeoJSON" src="https://custom-icon-badges.demolab.com/badge/GeoJSON-2952a3.svg?logo=json&logoColor=white&style=for-the-badge"></a>
+<a href="#"><img alt="GeoJSON" src="https://custom-icon-badges.demolab.com/badge/GeoJSON-1f3d7a.svg?logo=json&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="discord.py" src="https://img.shields.io/badge/discord-5865f2.svg?logo=discord&logoColor=ffffff&style=for-the-badge"></a>
 <a href="#"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-8d3f8d.svg?logo=github%20actions&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="Cron" src="https://img.shields.io/badge/Cron-372923.svg?logo=ubuntu&logoColor=white&style=for-the-badge"></a>
@@ -77,7 +77,8 @@ Collection of available API Feed URLs, through a custom built `JSON` file struct
 ```
 
 ## Resources
+- https://www.usgs.gov/products/web-tools/apis
+- https://www.usgs.gov/tools/earthquake-notifications-feeds-and-web-services 
 - https://earthquake.usgs.gov/fdsnws/event/1/
-- https://earthquake.usgs.gov/fdsnws/event/1/#parameters
 - https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson_detail.php
 
