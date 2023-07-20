@@ -1,7 +1,9 @@
 {
   "webhook": {
     "username": "USGS Earthquake Log",
-    "url": "~~~THIS URL HAS BEEN SANITIZED~~~"
+    "urls": [
+      "~~~ THIS URL HAS BEEN SANITIZED ~~~"
+    ]
   },
   "colors": {
     "red": {
@@ -19,6 +21,10 @@
     "violet": {
       "hex": "b346f9",
       "dec": 11749113
+    },
+    "blue": {
+      "hex": "11689e",
+      "dec": "1140894"
     }
   }
 }

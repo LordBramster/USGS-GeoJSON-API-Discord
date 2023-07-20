@@ -25,10 +25,9 @@ jobs:
 
       - name: Parse USGS-API Feed (GeoJSON) and Send Webhook
         env:
-          ENV_URL: ${{ secrets.ENV_URL }}
           ENV_URLS: ${{ secrets.ENV_URLS }}
 
         run: |
-          echo "Executing :: usgs_geojson_main.py"
+          echo "Starting ..."
           python usgs_geojson_main.py
-          echo "Finished :: usgs_geojson_main.py"
+          echo "Done !"

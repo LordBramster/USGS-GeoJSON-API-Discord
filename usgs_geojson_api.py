@@ -1,9 +1,24 @@
 from urllib.request import urlopen
 import json
 
+# for all params, see https://discordapp.com/developers/docs/resources/webhook#execute-webhook
+# for all params, see https://discordapp.com/developers/docs/resources/channel#embed-object
+
 """ Local Variable for the API config """
 config_api_file = 'usgs_geojson_api_config.json'
 config_api = json.load(open(config_api_file, 'r'))
+config_query_file = 'usgs_geojson_api_query.json'
+config_query = json.load(open(config_query_file, 'r'))
+
+
+def api_get_feed_interval():
+    """ Get API INTERVAL """
+    return config_query['params']['interval']
+
+
+def api_get_feed_magnitude():
+    """ Get API MAGNITUDE """
+    return config_query['params']['magnitude']
 
 
 def api_get_url_feed(key_interval, key_magnitude):
@@ -35,3 +50,11 @@ def geojson_get_quakes(geojson):
         quakes.append(quake_title)
         quakes_str += f'\n{quake_title}'
     return quakes, quakes_str
+
+
+def geojson_exists_quakes(quakes):
+    """ Return True/False if no Earthquakes from GeoJSON """
+    if len(quakes) <= 0:
+        return False
+    else:
+        return True

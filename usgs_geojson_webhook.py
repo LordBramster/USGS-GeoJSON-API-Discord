@@ -6,9 +6,9 @@ config_webhook_file = 'usgs_geojson_webhook_config.json'
 config_webhook = json.load(open(config_webhook_file, 'r'))
 
 
-def get_webhook_url():
-    """ Return URL from config """
-    return config_webhook['webhook']['url']
+def get_webhook_urls():
+    """ Return URLS from config """
+    return config_webhook['webhook']['urls']
 
 
 def get_webhook_username():
