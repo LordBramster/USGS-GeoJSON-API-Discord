@@ -2,7 +2,7 @@ name: Parse Earthquake API and Send Webhook(s)
 
 on:
   schedule:
-    - cron: '00 21 * * *' # at 3:00PM EVERY DAY | or '00 12 * * 5' at 12:00 on Friday
+    - cron: '00 21 * * *' # at 3:00PM EVERY DAY UTC-6
   workflow_dispatch:
 
 jobs:
