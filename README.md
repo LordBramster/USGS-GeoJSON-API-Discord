@@ -40,8 +40,11 @@ Once the `Workflow Job` finishes, an **embedded message** is sent to the **Webho
 > It will parse the string list with `json.loads()` to convert the secret into a readable list of Webhook URLs, and then continue the script.*
 
 <p align="center">
-    <a href="#"><img width="85%" src="./assets/img/demo_discord_channel.JPG"></a>
+    <a href="#">
+      <img width="90%" src="./assets/img/demo_discord_channel-0.JPG">
+    </a>
 </p>
+
 
 > Using `usgs_geojson_webhook_config` is the preferred method for secure/private/prod environments. For demonstration purposes via GitHub Actions, this method was changed to using Secret Vars.
 
