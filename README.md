@@ -33,9 +33,11 @@
 
 Once the `Workflow Job` finishes, an **embedded message** is sent to the **Webhook URL**.
 - All Discord-Webhook URLs on this Repo are safely stored as environment variables and GitHub secrets.
-- When the `Workflow Job` executes, it will pull the secret var (as a stringed list) from the repo as a local environment var on the server.
-- As an example, the Webhook URLs (as a Secret-var) are parsed from: `'["https://discord.com/api/webhooks/...", "https://discord.com/api/webhooks/...", "etc"]'`
-- It will parse the string list with `json.loads()` to convert the secret into a readable list of Webhook URLs, and continue in the script.
+- When the `Workflow Job` executes, it will pull the Secret from the repo into a local environment var on the server instance.
+- The script will ping each URL found within the converted list of Webhook URLs.
+
+> As an example, the Webhook URLs are parsed from: `'["https://discord.com/api/webhooks/...", "https://discord.com/api/webhooks/...", "etc"]'`
+> It will parse the string list with `json.loads()` to convert the secret into a readable list of Webhook URLs, and then continue the script.
 
 <p align="center">
     <a href="#"><img width="85%" src="./assets/img/demo_discord_channel.JPG"></a>
