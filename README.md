@@ -21,7 +21,7 @@
 - **USGS API Feed** is parsed and pulled to find Earthquake data for `significant` magnitudes over a `week` interval.
 - A finalized Earthquake Summary, as an embedded message, is sent to multiple **Discord Webhook URLs**.
 
-> *Note: Webhook links are stored for security through **Git Secrets** on the public repository. This does not reflect implementation for a real prod environment.*
+> *Note: Webhook links are stored for security through **Secrets** on the public repository. Details further below.*
 
 <br>
 
@@ -29,13 +29,19 @@
 
 
 
-## Discord Webhook
+## Discord Webhooking
 
-Once the `Workflow Job` finishes, an **embedded message** is sent to the **Discord Webhook URL**, safely stored as an environment variable.
+Once the `Workflow Job` finishes, an **embedded message** is sent to the **Webhook URL**.
+- All Discord-Webhook URLs on this Repo are safely stored as environment variables and GitHub secrets.
+- When the `Workflow Job` executes, it will pull the secret var (as a stringed list) from the repo as a local environment var on the server.
+- As an example, the Webhook URLs (as a Secret-var) are parsed from: `'["https://discord.com/api/webhooks/...", "https://discord.com/api/webhooks/...", "etc"]'`
+- It will parse the string list with `json.loads()` to convert the secret into a readable list of Webhook URLs, and continue in the script.
 
 <p align="center">
     <a href="#"><img width="85%" src="./assets/img/demo_discord_channel.JPG"></a>
 </p>
+
+> Using `usgs_geojson_webhook_config` is the preferred method for secure/private/prod environments. For demonstration purposes via GitHub Actions, this method was changed to using Secret Vars.
 
 ## USGS-API Feed URLs:
 
