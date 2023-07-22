@@ -11,7 +11,7 @@
 
 <a href="#"><img alt="USGS API" src="https://custom-icon-badges.demolab.com/badge/USGS API-009973.svg?logo=server&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="GeoJSON" src="https://custom-icon-badges.demolab.com/badge/GeoJSON-1f3d7a.svg?logo=json&logoColor=white&style=for-the-badge"></a>
-<a href="#"><img alt="discord.py" src="https://img.shields.io/badge/discord-5865f2.svg?logo=discord&logoColor=ffffff&style=for-the-badge"></a>
+<a href="#"><img alt="Discord Webhook" src="https://img.shields.io/badge/webhooks-7289DA.svg?logo=discord&logoColor=ffffff&style=for-the-badge&label=%20&labelColor=5c5c5c"></a>
 <a href="#"><img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub%20Actions-8d3f8d.svg?logo=github%20actions&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="Cron" src="https://img.shields.io/badge/Cron-372923.svg?logo=ubuntu&logoColor=white&style=for-the-badge"></a>
 
