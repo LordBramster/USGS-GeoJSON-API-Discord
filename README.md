@@ -47,7 +47,7 @@ Once the `Workflow Job` finishes, an **embedded message** is sent to the **Webho
 
 ## USGS-API Feed URLs:
 
-Collection of available API Feed URLs, through a custom built `JSON` file structuring URLs by **Interval** and **Magnititude**.
+Collection of available API Feed URLs, utilizing `JSON` to structure URLs by **Interval** and **Magnititude**.
 
 ```
 {
