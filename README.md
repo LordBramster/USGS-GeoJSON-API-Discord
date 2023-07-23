@@ -75,7 +75,7 @@ It defines several types of JSON objects and the manner in which they are combin
 
 Using Discord, an Earthquake Bot would centralize earthquake-related information within the platform, making it convenient for members to access vital updates and resources without leaving the Discord environment. This streamlined access to information can enhance community preparedness and response during seismic events.
 
-### Bot System (USGS Earthquake Bot)
+### Bot Integration (USGS Earthquake Bot)
 
 The **USGS Earthquake Bot** responds to two commands:
 <br>
