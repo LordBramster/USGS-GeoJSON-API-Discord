@@ -1,5 +1,6 @@
 from urllib.request import urlopen
 import json
+from datetime import datetime
 
 # for all params, see https://discordapp.com/developers/docs/resources/webhook#execute-webhook
 # for all params, see https://discordapp.com/developers/docs/resources/channel#embed-object
@@ -19,6 +20,11 @@ def api_get_feed_interval():
 def api_get_feed_magnitude():
     """ Get API MAGNITUDE """
     return config_query['params']['magnitude']
+
+
+def api_get_query_url():
+    """ Get API Query URL """
+    return config_api['query']['url']
 
 
 def api_get_url_feed(key_interval, key_magnitude):
@@ -41,14 +47,31 @@ def api_status_valid(status):
         return False
 
 
-def geojson_get_quakes(geojson):
+def geojson_get_quakes_titles(geojson):
     """ Get Quake Properties from GeoJSON """
     quakes = []
     quakes_str = ""
     for quake in geojson['features']:
         quake_title = quake['properties']['title']
-        quakes.append(quake_title)
-        quakes_str += f'\n{quake_title}'
+        quake_message = f'{quake_title}'
+        quakes.append(quake_message)
+        quakes_str += f'\n{quake_message}'
+    return quakes, quakes_str
+
+
+def geojson_get_quakes(geojson):
+    """ Get Quake Unixtime+Magnitude+Place from GeoJSON """
+    quakes = []
+    quakes_str = ""
+    for quake in geojson['features']:
+        # TODO /1000 is required for Win10 OS
+        quake_unixtime = quake['properties']['time']
+        quake_utc = datetime.fromtimestamp(quake_unixtime / 1000)
+        quake_mag = quake['properties']['mag']
+        quake_place = quake['properties']['place']
+        quake_message = f'{quake_utc:%Y-%m-%d} | M{quake_mag} => {quake_place}'
+        quakes.append(quake_message)
+        quakes_str += f'\n{quake_message}'
     return quakes, quakes_str
 
 

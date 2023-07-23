@@ -1,4 +1,7 @@
 {
+  "query": {
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson"
+  },
   "feed": {
     "hour": {
       "M1.0": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_hour.geojson",

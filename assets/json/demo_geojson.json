@@ -1,0 +1,221 @@
+{
+    "type": "FeatureCollection",
+    "metadata": {
+        "generated": 1690130160000,
+        "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+        "title": "USGS All Earthquakes, Past Hour",
+        "status": 200,
+        "api": "1.10.3",
+        "count": 5
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1,
+                "place": "37 km SW of Manley Hot Springs, Alaska",
+                "time": 1690129670175,
+                "updated": 1690129809434,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ak0239dnbmmh",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ak0239dnbmmh.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 15,
+                "net": "ak",
+                "code": "0239dnbmmh",
+                "ids": ",ak0239dnbmmh,",
+                "sources": ",ak,",
+                "types": ",origin,phase-data,",
+                "nst": null,
+                "dmin": null,
+                "rms": 0.56,
+                "gap": null,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 1.0 - 37 km SW of Manley Hot Springs, Alaska"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -151.1548,
+                    64.7537,
+                    16.9
+                ]
+            },
+            "id": "ak0239dnbmmh"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 4.9,
+                "place": "southwestern Atlantic Ocean",
+                "time": 1690128145520,
+                "updated": 1690129083040,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000khty",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000khty.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 369,
+                "net": "us",
+                "code": "7000khty",
+                "ids": ",us7000khty,",
+                "sources": ",us,",
+                "types": ",origin,phase-data,",
+                "nst": 24,
+                "dmin": 16.836,
+                "rms": 0.76,
+                "gap": 78,
+                "magType": "mb",
+                "type": "earthquake",
+                "title": "M 4.9 - southwestern Atlantic Ocean"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -10.4054,
+                    -49.3085,
+                    10
+                ]
+            },
+            "id": "us7000khty"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 2.1400001,
+                "place": "6 km SSW of Pāhala, Hawaii",
+                "time": 1690127994220,
+                "updated": 1690128180750,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv73494252",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/hv73494252.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "automatic",
+                "tsunami": 0,
+                "sig": 70,
+                "net": "hv",
+                "code": "73494252",
+                "ids": ",hv73494252,",
+                "sources": ",hv,",
+                "types": ",origin,phase-data,",
+                "nst": 36,
+                "dmin": null,
+                "rms": 0.0900000036,
+                "gap": 155,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 2.1 - 6 km SSW of Pāhala, Hawaii"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -155.499664306641,
+                    19.1461658477783,
+                    31.8199996948242
+                ]
+            },
+            "id": "hv73494252"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 1.43,
+                "place": "1 km SW of Pistol River, Oregon",
+                "time": 1690127724900,
+                "updated": 1690128893680,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw61943111",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/uw61943111.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 31,
+                "net": "uw",
+                "code": "61943111",
+                "ids": ",uw61943111,",
+                "sources": ",uw,",
+                "types": ",origin,phase-data,",
+                "nst": 9,
+                "dmin": 0.06071,
+                "rms": 0.31,
+                "gap": 212,
+                "magType": "ml",
+                "type": "earthquake",
+                "title": "M 1.4 - 1 km SW of Pistol River, Oregon"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.4085,
+                    42.27016666666667,
+                    -0.24
+                ]
+            },
+            "id": "uw61943111"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "mag": 3.29,
+                "place": "8 km SSW of Potala Pastillo, Puerto Rico",
+                "time": 1690127507750,
+                "updated": 1690129150000,
+                "tz": null,
+                "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71419013",
+                "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr71419013.geojson",
+                "felt": null,
+                "cdi": null,
+                "mmi": null,
+                "alert": null,
+                "status": "reviewed",
+                "tsunami": 0,
+                "sig": 167,
+                "net": "pr",
+                "code": "71419013",
+                "ids": ",pr71419013,",
+                "sources": ",pr,",
+                "types": ",origin,phase-data,",
+                "nst": 21,
+                "dmin": 0.1131,
+                "rms": 0.14,
+                "gap": 195,
+                "magType": "md",
+                "type": "earthquake",
+                "title": "M 3.3 - 8 km SSW of Potala Pastillo, Puerto Rico"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.519,
+                    17.9163333333333,
+                    13.68
+                ]
+            },
+            "id": "pr71419013"
+        }
+    ],
+    "bbox": [
+        -155.49966430664,
+        -49.3085,
+        -0.24,
+        -10.4054,
+        64.7537,
+        31.819999694824
+    ]
+}
