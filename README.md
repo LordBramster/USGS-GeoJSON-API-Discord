@@ -30,7 +30,9 @@
 
 ## GeoJSON Data
 
-*GeoJSON is a geospatial data interchange format based on JavaScript Object Notation (JSON).  It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.*
+**GeoJSON** is a geospatial data interchange format based on **JavaScript Object Notation (JSON)**.  
+
+It defines several types of JSON objects and the manner in which they are combined to represent data about geographic features, their properties, and their spatial extents. GeoJSON uses a geographic coordinate reference system, World Geodetic System 1984, and units of decimal degrees.
 
 ### Sample of GeoJSON Feature Collection:
 ```
@@ -73,11 +75,11 @@
 
 Using Discord, an Earthquake Bot would centralize earthquake-related information within the platform, making it convenient for members to access vital updates and resources without leaving the Discord environment. This streamlined access to information can enhance community preparedness and response during seismic events.
 
-### Integrated Bot
+### Bot System (USGS Earthquake Bot)
 
 The **USGS Earthquake Bot** responds to two commands:
 <br>
-`.quakes` - *reports up to 50 Quakes, over the past 24-Hours worth of Quakes, using just the `Title` property.*
+`.quakes` - *reports up to 50 Quakes, over the past 24-Hours, using just the `Title` property.*
 <br>
 `.earthquakes` - *reports up to 50 Earthquakes, based on whatever `api-query` the member sends in the command.*
 
