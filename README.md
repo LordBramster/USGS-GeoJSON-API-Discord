@@ -7,7 +7,7 @@
 
 # USGS Earthquake GeoJSON API
 
-> A simple USGS Earthquake GeoJSON API parser and integrations with Discord.
+> A simple USGS Earthquake GeoJSON API parser with integrations to Discord.
 
 <a href="#"><img alt="USGS API" src="https://custom-icon-badges.demolab.com/badge/USGS API-009973.svg?logo=server&logoColor=white&style=for-the-badge"></a>
 <a href="#"><img alt="GeoJSON" src="https://custom-icon-badges.demolab.com/badge/GeoJSON-8d3f8d.svg?logo=json&logoColor=white&style=for-the-badge"></a>
